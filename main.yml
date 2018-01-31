@@ -5,15 +5,15 @@
   connection: local
 
   tasks:
-  - name: change ap groups
-    aireos_config:
-      provider:
-        host: "{{ inventory_hostname }}"
-        username: "{{ WLC_Username }}"
-        password: "{{ WLC_Password }}"
-      lines:
-        - "ap group-name default-group A_25029_RRP"
-      register:
-        - result
+    - name: change ap groups
+      aireos_config:
+        provider:
+          host: "{{ inventory_hostname }}"
+          username: "{{ WLC_Username }}"
+          password: "{{ WLC_Password }}"
+        lines:
+          - "ap group-name default-group A_25029_RRP"
+        register:
+          - result
 
-        
+          
